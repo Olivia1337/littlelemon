@@ -10,12 +10,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} /> {/* Updated import */}
-        <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/booking" element={<Booking />} />{" "}
+        <Route exact path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
       <Footer />
     </BrowserRouter>
