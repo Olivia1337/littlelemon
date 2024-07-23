@@ -78,6 +78,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             }}
             required
           />
+          <span id="date-description" className="sr-only">
+            Select a date for your reservation
+          </span>
 
           <label htmlFor="res-time">Time:</label>
           <select
@@ -93,6 +96,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
               <option key={time}>{time}</option>
             ))}
           </select>
+          <span id="time-description" className="sr-only">
+            Select a time for your reservation
+          </span>
 
           <label htmlFor="guests">Number of Guests:</label>
           <input
@@ -108,6 +114,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             aria-describedby="guests-description"
             required
           />
+          <span id="guests-description" className="sr-only">
+            Enter the number of guests (1-20)
+          </span>
 
           <label htmlFor="occasion">Occasion:</label>
           <select
@@ -124,6 +133,9 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             <option>Anniversary</option>
             <option>Wedding</option>
           </select>
+          <span id="occasion-description" className="sr-only">
+            Select the occasion for your reservation
+          </span>
 
           <button
             type="submit"
