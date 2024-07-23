@@ -13,8 +13,11 @@ const ConfirmedBooking = () => {
   }, []);
 
   return (
-    <section className="booking-confirmation">
-      <h1>Your reservation is confirmed!</h1>
+    <section
+      className="booking-confirmation"
+      aria-labelledby="confirmation-header"
+    >
+      <h1 id="confirmation-header">Your reservation is confirmed!</h1>
       <h2>Modern Restaurant & Bar</h2>
       <div className="confirmation-details-container">
         <h3>
@@ -32,8 +35,7 @@ const ConfirmedBooking = () => {
       </div>
 
       <Link to="/">
-        {" "}
-        <button>Back to start</button>
+        <button aria-label="Back to home page">Back to start</button>
       </Link>
     </section>
   );

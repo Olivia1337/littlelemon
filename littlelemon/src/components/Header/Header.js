@@ -6,9 +6,9 @@ import "./Header.styles.css";
 
 export default function Header() {
   return (
-    <header>
-      <Link to={"/"}>
-        <img src={logo} alt="Little lemon logo" width={300} />
+    <header aria-label="Site Header">
+      <Link to="/" aria-label="Navigate to home page">
+        <img src={logo} alt="Little Lemon logo" width={300} />
       </Link>
 
       <Nav />

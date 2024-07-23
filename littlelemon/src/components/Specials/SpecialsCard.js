@@ -4,8 +4,12 @@ import "./Specials.styles.css";
 
 export default function SpecialsCard({ title, description, id, price, image }) {
   return (
-    <div className="specials-card" id={id}>
-      <img src={image} alt="Little lemon meal" width={100} />
+    <div
+      className="specials-card"
+      id={id}
+      aria-label={`Specials card for ${title}, priced at ${price}`}
+    >
+      <img src={image} alt={`Image of ${title}`} width={100} />
       <div>
         <div>
           <div>
@@ -16,9 +20,9 @@ export default function SpecialsCard({ title, description, id, price, image }) {
         </div>
         <div className="order-button">
           <p>
-            <strong> Order a delivery</strong>
+            <strong>Order a delivery</strong>
           </p>
-          <FaShoppingCart />
+          <FaShoppingCart aria-label="Shopping cart icon" />
         </div>
       </div>
     </div>

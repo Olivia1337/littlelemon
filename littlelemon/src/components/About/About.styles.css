@@ -8,11 +8,12 @@
 }
 
 .about p {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .about h1 {
   font-size: 3em;
+  color: #2d3a36;
 }
 .about > div {
   width: 30%;
