@@ -4,9 +4,12 @@ import "./Testimonials.styles.css";
 
 export default function TestimonialCard({ name, quote, image, stars }) {
   return (
-    <div className="testimonial-card">
+    <div
+      className="testimonial-card"
+      aria-label={`Testimonial from ${name}, ${stars} stars`}
+    >
       <div>
-        <img src={image} alt="Portrait of person giving testimonial" />
+        <img src={image} alt={`Portrait of ${name}`} />
       </div>
       <div>
         <h3>{name}</h3>

@@ -19,9 +19,21 @@ export default function About() {
           incorporate additional cuisines from the Mediterranean region.
         </p>
       </div>
-      <div className="image-container">
-        <img src={image01} alt="Little lemon meal" className="image01" />
-        <img src={image02} alt="Little lemon meal" className="image02" />
+      <div
+        className="image-container"
+        role="img"
+        aria-label="Images of Little Lemon meals"
+      >
+        <img
+          src={image01}
+          alt="Mario and Adrian preparing a meal at Little Lemon"
+          className="image01"
+        />
+        <img
+          src={image02}
+          alt="A beautifully plated dish at Little Lemon"
+          className="image02"
+        />
       </div>
     </div>
   );

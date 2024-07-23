@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Updated import for navigation
-import { Link } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, dispatch }) => {
   const { times } = availableTimes;
@@ -47,14 +46,20 @@ const BookingForm = ({ availableTimes, dispatch }) => {
   };
 
   return (
-    <section name="reservations" className="booking-form">
+    <section
+      name="reservations"
+      className="booking-form"
+      aria-labelledby="booking-header"
+    >
       <div className="bookings-container">
-        <h2 className="booking-header">Little Lemon</h2>
+        <h2 id="booking-header" className="booking-header">
+          Little Lemon
+        </h2>
         <h2>Reserve a table</h2>
         <form
           className="form-container"
           onSubmit={handleSubmit}
-          aria-label="On Submit"
+          aria-label="Reservation Form"
         >
           <label htmlFor="res-date">Date: </label>
           <input
@@ -62,7 +67,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             name="date"
             id="res-date"
             value={bookings.date}
-            aria-label="On Change"
+            aria-required="true"
+            aria-describedby="date-description"
             onChange={(e) => {
               setBookings({ ...bookings, date: e.target.value });
               dispatch({
@@ -79,7 +85,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             name="time"
             value={bookings.time}
             onChange={handleChange}
-            aria-label="On Change"
+            aria-required="true"
+            aria-describedby="time-description"
             required
           >
             {times.map((time) => (
@@ -97,7 +104,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             name="guests"
             value={bookings.guests}
             onChange={handleChange}
-            aria-label="On Change"
+            aria-required="true"
+            aria-describedby="guests-description"
             required
           />
 
@@ -107,7 +115,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             value={bookings.occasion}
             name="occasion"
             onChange={handleChange}
-            aria-label="On Change"
+            aria-required="true"
+            aria-describedby="occasion-description"
             required
           >
             <option>Birthday</option>
@@ -116,7 +125,11 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             <option>Wedding</option>
           </select>
 
-          <button type="submit" className="booking-button">
+          <button
+            type="submit"
+            className="booking-button"
+            aria-label="Make Your reservation"
+          >
             Make Your reservation
           </button>
         </form>
