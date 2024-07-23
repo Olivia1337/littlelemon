@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import "./Specials.styles.css";
 
 export default function SpecialsCard({ title, description, id, price, image }) {
   return (
@@ -14,7 +15,9 @@ export default function SpecialsCard({ title, description, id, price, image }) {
           <p>{description}</p>
         </div>
         <div className="order-button">
-          <p>Order as delivery</p>
+          <p>
+            <strong> Order a delivery</strong>
+          </p>
           <FaShoppingCart />
         </div>
       </div>

@@ -1,15 +1,16 @@
 import React from "react";
 import SpecialsCard from "./SpecialsCard";
-import image01 from "../assets/meal04.jpg";
-import image02 from "../assets/meal02.jpg";
-import image03 from "../assets/meal03.jpg";
+import image01 from "../../assets/meal04.jpg";
+import image02 from "../../assets/meal02.jpg";
+import image03 from "../../assets/meal03.jpg";
+import "./Specials.styles.css";
 
 export default function Specials() {
   return (
     <div className="specials" id="menu">
       <div>
-        <h1>Specials</h1>
-        <button>Open Menu</button>
+        <h1 className="title">Specials</h1>
+        <button>OPEN MENU</button>
       </div>
       <div>
         <SpecialsCard

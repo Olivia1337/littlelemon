@@ -1,12 +1,14 @@
 import React from "react";
-import image01 from "../assets/owners01.jpg";
-import image02 from "../assets/owners02.jpg";
+import image01 from "../../assets/owners01.jpg";
+import image02 from "../../assets/owners02.jpg";
+import "./About.styles.css";
 
 export default function About() {
   return (
     <div className="about" id="about">
       <div>
-        <h1>Little Lemon</h1>;<h2>Chicago</h2>
+        <h1>Little Lemon</h1>
+        <h2>Chicago</h2>
         <p>
           Little Lemon is owned by two Italian brothers, Mario and Adrian, who
           moved to the United States to pursue their shared dream of owning a

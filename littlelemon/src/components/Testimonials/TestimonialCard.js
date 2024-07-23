@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import "./Testimonials.styles.css";
 
 export default function TestimonialCard({ name, quote, image, stars }) {
   return (

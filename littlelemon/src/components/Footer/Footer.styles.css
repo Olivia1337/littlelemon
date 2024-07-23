@@ -1,0 +1,57 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #495e57;
+  padding-block: 2rem;
+  padding-inline: 5rem;
+  border-top: 0.3rem solid white; /* Added this line */
+}
+
+.footer img {
+  align-self: center;
+  width: 14rem;
+  border-radius: 20px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin: 0 0 10px 0;
+}
+
+.footer-nav a:hover,
+.contact-info a:hover {
+  color: #f4ce14; /* Yellow color on hover */
+}
+.social-media a:hover svg {
+  fill: #f4ce14; /* Yellow color for icons on hover */
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer strong {
+  color: white;
+}
+.footer-nav,
+.contact-info a {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.social-media a {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}

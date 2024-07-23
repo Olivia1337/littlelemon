@@ -1,9 +1,10 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
-import portrait01 from "../assets/portrait01.jpg";
-import portrait02 from "../assets/portrait02.jpg";
-import portrait03 from "../assets/portrait03.jpg";
-import portrait04 from "../assets/portrait04.jpg";
+import portrait01 from "../../assets/portrait01.jpg";
+import portrait02 from "../../assets/portrait02.jpg";
+import portrait03 from "../../assets/portrait03.jpg";
+import portrait04 from "../../assets/portrait04.jpg";
+import "./Testimonials.styles.css";
 
 export default function Testimonials() {
   return (
